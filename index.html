@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rasrang - Pure Veg Restaurant</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="rasrang.css" />
+
+  <style>
+    .card-img-top{
+  width: 100%;
+  height: 150px;
+  object-fit: contain; 
+  padding: 10px; 
+  background-color: #f8f8f8;
+    } 
+    .card{
+      height: 100%;
+  min-height: 250px; 
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      padding-top: 80px;
+    }
+    .navbar {
+      background-color: #006400;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      color: #fff;
+    }
+    .navbar-brand img {
+      width: 40px;
+      height: 40px;
+      margin-right: 8px;
+    }
+    .nav-link {
+      color: #f8f9fa !important;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+    .nav-link:hover {
+      color: #ffc107 !important;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1470&q=80') no-repeat center center;
+      background-size: cover;
+      height: 75vh;
+      position: relative;
+      color: white;
+    }
+    .hero .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .menu {
+  display: flex;               /* Icon aur text side by side */
+  justify-content: center;    /* Center horizontally */
+  align-items: center;        /* Vertical alignment */
+  gap: 8px;                   /* Icon aur text ke beech gap */
+  cursor: pointer;            /* Mouse pointer hand bane click par */
+  margin-bottom: 20px;        /* Thoda neeche space */
+}
+
+.menu h2 {
+  margin: 0;                  /* Headings ke default margin hatao */
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;                /* Thoda stylish color */
+}
+
+</style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="https://cdn-icons-png.flaticon.com/512/2913/2913460.png" alt="Veg Logo">
+        Rasrang
+      </a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon text-dark"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#order">Order</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="overlay text-center">
+      <div>
+        <h1 class="display-4 fw-bold">Welcome to Rasrang</h1>
+        <p class="lead">Pure Vegetarian Delights</p>
+      </div>
+    </div>
+  </header>
+  <!-- About Us -->
+  <section id="about" class="py-5 text-center" style="background: #f0fff4; color: #3a5a2a;">
+    <div class="container" style="max-width: 700px; margin: auto;">
+    <img src="https://cdn-icons-png.flaticon.com/512/1239/1239525.png" alt="About Us Icon" style="width: 20px; margin-right: 5px; vertical-align: middle;">
+      <h2 class="mb-4" style="font-weight: 700; font: 2.8rem; color: #4caf50;">About Us</h2>
+      <p style="font-size: 1.3rem; line-height: 1.8; color: #557a42;">
+     <h3>At Rasrang, we celebrate the rich flavors of nature by offering a diverse menu full of delicious, nutritious vegetarian dishes. Each meal is thoughtfully prepared to nourish your body and delight your taste buds.</h3>
+    </p>
+    </div>
+  </section>
+ <!--menu section-->
+ <section id="menu">
+<div class="menu">
+<img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="Menu Icon" style="width: 20px; margin-right: 5px; vertical-align: middle;">
+<h2>Our Menu </h2>
+</div>
+ </section> 
+<h3 class="mt-5" style="cursor: pointer;" onclick="toggleStarters()">Starters &#x25BC;</h3>
+<div id="starters-section" class= "row row-cols-1 row-cols-md-2 g-4" style="display: none;">
+<script>
+  function toggleStarters() {
+    const section = document.getElementById('starters-section');
+    if (section.style.display === 'none') {
+      section.style.display = 'flex';
+    } else {
+      section.style.display = 'none';
+    }
+  }
+</script>
+    <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\paneer.jpeg "class="card-img-top"><div class="card-body"><h5>Paneer Tikka – ₹170</h5><p>Grilled marinated paneer cubes with smoky flavor.</p></div></div></div>
+    <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\Harabhara.jpeg" class="card-img-top"><div class="card-body"><h5>Hara Bhara Kabab – ₹160</h5><p>Spinach and peas cutlets, lightly spiced.</p></div></div></div> 
+    <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\corn.jpeg" class="card-img-top"><div class="card-body"><h5>Crispy Corn – ₹150</h5><p>Golden-fried corn tossed in Chinese spices.</p></div></div></div>
+    <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\dahikabab.jpeg" class="card-img-top"><div class="card-body"><h5>Dahi Ke Kebab – ₹170</h5><p>Creamy hung curd-based kebabs.</p></div></div></div> 
+    <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\tandoorialoo.jpeg" class="card-img-top"><div class="card-body"><h5>Tandoori Aloo – ₹140</h5><p>Baby potatoes marinated in spicy masala.</p></div></div></div>
+    <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\cheesebol.jpeg" class="card-img-top"><div class="card-body"><h5>Cheese Balls – ₹160</h5><p>Cheesy, crisp fried balls with herbs.</p></div></div></div> 
+    <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\springnroll.jpeg" class="card-img-top"><div class="card-body"><h5>Spring Rolls – ₹150</h5><p>Stuffed with spicy mixed vegetables.</p></div></div></div> 
+    <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\minisamosa.jpeg" class="card-img-top"><div class="card-body"><h5>Mini Samosa Platter – ₹120</h5><p>Assorted mini samosas with chutneys.</p></div></div></div>
+    <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\stuffedmushrooms.jpeg" class="card-img-top"><div class="card-body"><h5>Stuffed Mushrooms – ₹170</h5><p>Cheesy mushrooms with spice mix.</p></div></div></div> 
+    <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\VegSeekhKebab.jpeg" class="card-img-top"><div class="card-body"><h5>Veg Seekh Kebab – ₹160</h5><p>Veg skewers with Indian masala coating.</p></div></div></div> </div>        
+</div>
+<h3 class="mt-5" style="cursor: pointer;" onclick="toggleSouthIndian()">South Indian &#x25BC;</h3>
+<div  id="southindian-section" class="row-cols-1 row-cols-md-2 g-4" style="display: none;">
+  <script>
+  function toggleSouthIndian() {
+    const section = document.getElementById('southindian-section');
+    if (section.style.display === 'none') {
+      section.style.display = 'flex';
+    } else {
+      section.style.display = 'none';
+    }
+  }
+</script>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\masaladhosa.jpeg" class="card-img-top"><div class="card-body"><h5>Masala Dosa – ₹110</h5><p>Thin crispy dosa filled with spiced potatoes.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\plaindhosa.jpeg" class="card-img-top"><div class="card-body"><h5>Plain Dosa – ₹90</h5><p>Classic South Indian crispy dosa served with chutney.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\idali.jpeg" class="card-img-top"><div class="card-body"><h5>Idli Sambhar – ₹80</h5><p>Steamed rice cakes served with sambhar & chutneys.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\meduvada.jpeg" class="card-img-top"><div class="card-body"><h5>Medu Vada – ₹90</h5><p>Crispy lentil donuts served with sambhar.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\onion.jpeg" class="card-img-top"><div class="card-body"><h5>Onion Uttapam – ₹100</h5><p>Thick pancake topped with chopped onions.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\ravadhosa.jpeg" class="card-img-top"><div class="card-body"><h5>Rava Dosa – ₹120</h5><p>Thin semolina dosa with crispy texture.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\set.jpeg" class="card-img-top"><div class="card-body"><h5>Set Dosa – ₹100</h5><p>Soft small dosas served in a set of three.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\kesari.jpeg" class="card-img-top"><div class="card-body"><h5>Kesari Bath – ₹80</h5><p>Sweet semolina dessert made with ghee & saffron.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\ven.jpeg" class="card-img-top"><div class="card-body"><h5>Ven Pongal – ₹90</h5><p>South Indian rice-lentil comfort food.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\gheerost.jpeg" class="card-img-top"><div class="card-body"><h5>Ghee Roast Dosa – ₹130</h5><p>Dosa roasted in ghee for rich flavor.</p></div></div></div>
+</div>
+<h3 class="mt-5" style="cursor: pointer;" onclick="toggleChinese()">Chinese &#x25BC;</h3>
+<div id="chinese-section" class="row-cols-1 row-cols-md-2 g-4" style="display: none;">
+  <script>
+  function toggleChinese() {
+    const section = document.getElementById('chinese-section');
+    if (section.style.display === 'none') {
+      section.style.display = 'flex';
+    } else {
+      section.style.display = 'none';
+    }
+  }
+</script>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\hakka.jpeg" class="card-img-top"><div class="card-body"><h5>Veg Hakka Noodles – ₹120</h5><p>Stir-fried noodles with vegetables & soy sauce.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\friderise.jpeg" class="card-img-top"><div class="card-body"><h5>Veg Fried Rice – ₹110</h5><p>Fried rice with seasonal vegetables & sauces.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\chillipaneer.jpeg" class="card-img-top"><div class="card-body"><h5>Chilli Paneer Dry – ₹160</h5><p>Paneer cubes in spicy Chinese sauce.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\machuran.jpeg" class="card-img-top"><div class="card-body"><h5>Gobi Manchurian – ₹140</h5><p>Fried cauliflower in Manchurian sauce.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\noodles.jpeg" class="card-img-top"><div class="card-body"><h5>Noodles – ₹130</h5><p>Spicy noodles tossed in schezwan sauce.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\fride.jpeg" class="card-img-top"><div class="card-body"><h5>Fried Rise  – ₹140</h5><p>Fried rice with schezwan sauce & veggies.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\roll.jpeg" class="card-img-top"><div class="card-body"><h5>Veg Rolls – ₹100</h5><p>Veg rolls deep fried until crisp.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\vegsoup.jpeg" class="card-img-top"><div class="card-body"><h5>Steamed Soup – ₹90</h5><p>Steamed dumplings served with spicy chutney.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\indo.jpeg" class="card-img-top"><div class="card-body"><h5>Indo-Chinese Soup – ₹90</h5><p>Spicy and tangy Indo-Chinese soup.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\sweetcorn.jpeg" class="card-img-top"><div class="card-body"><h5>Sweet corn Soup – ₹80</h5><p>Creamy sweet corn soup with veggies.</p></div></div></div>
+</div>
+<h3 class="mt-5" style="cursor: pointer;"onclick="toggleDessert()">Desserts &#x25BC;</h3>
+<div id="dessert-section" class="row row-cols-1 row-cols-md-2 g-4" style="display: none;">
+  <script>
+  function toggleDessert() {
+    const section = document.getElementById('dessert-section');
+    if (section.style.display === 'none') {
+      section.style.display = 'flex';
+    } else {
+      section.style.display = 'none';
+    }
+  }
+</script>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\gulabjamun.jpeg" class="card-img-top"><div class="card-body"><h5>Gulab Jamun – ₹70</h5><p>Soft fried balls soaked in sugar syrup.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\rasmalai.jpeg" class="card-img-top"><div class="card-body"><h5>Rasmalai – ₹90</h5><p>Soft paneer discs in flavored milk.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\brownie.jpeg" class="card-img-top"><div class="card-body"><h5>Chocolate Brownie – ₹100</h5><p>Fudgy brownie topped with chocolate sauce.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\icecreame.jpeg" class="card-img-top"><div class="card-body"><h5>Ice Cream Sundae – ₹120</h5><p>Vanilla, strawberry & chocolate with toppings.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\falooda.jpeg" class="card-img-top"><div class="card-body"><h5>Kulfi Falooda – ₹130</h5><p>Traditional kulfi with rose-flavored falooda.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\halwa.jpeg" class="card-img-top"><div class="card-body"><h5>Carrot Halwa – ₹80</h5><p>Classic Indian dessert made with ghee & carrots.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\mango.jpeg" class="card-img-top"><div class="card-body"><h5>Mango Mousse – ₹110</h5><p>Light and creamy mango-flavored mousse.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\fruit.jpeg" class="card-img-top"><div class="card-body"><h5>Fruit Custard – ₹90</h5><p>Mixed fruits with creamy custard.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\cheese.jpeg" class="card-img-top"><div class="card-body"><h5>Cheesecake Slice – ₹150</h5><p>Velvety cheesecake with biscuit base.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\ice.jpeg" class="card-img-top"><div class="card-body"><h5>Ice Cream (2 scoops) – ₹80</h5><p>Choice of vanilla, chocolate, strawberry.</p></div></div></div>
+</div>
+<h3 class="mt-5" style="cursor: pointer;"onclick="toggleDrinksMocktailsCocktails()">Drinks / Mocktails / Cocktails &#x25BC;</h3>
+<div id="DrinksMocktailsCocktails-section" class="row row-cols-1 row-cols-md-2 g-4" style="display: none;">
+  <script>
+  function toggleDrinksMocktailsCocktails() {
+    const section = document.getElementById('DrinksMocktailsCocktails-section');
+    if (section.style.display === 'none') {
+      section.style.display = 'flex';
+    } else {
+      section.style.display = 'none';
+    }
+  }
+</script>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\mojito.jpeg" class="card-img-top"><div class="card-body"><h5>Mojito – ₹90</h5><p>Refreshing lime and mint cooler.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\colada.jpeg" class="card-img-top"><div class="card-body"><h5>Virgin Pina Colada – ₹120</h5><p>Blend of pineapple and coconut milk.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\blue.jpeg" class="card-img-top"><div class="card-body"><h5>Blue Lagoon – ₹130</h5><p>Citrusy mocktail with blue curaçao flavor.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\fruitpunch.jpeg" class="card-img-top"><div class="card-body"><h5>Fruit Punch – ₹100</h5><p>Mix of fruit juices with crushed ice.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\masala.jpeg" class="card-img-top"><div class="card-body"><h5>Masala Lemonade – ₹70</h5><p>Spiced Indian-style nimbu paani.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\coffee.jpeg" class="card-img-top"><div class="card-body"><h5>Cold Coffee – ₹90</h5><p>Chilled coffee shake with ice cream.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\lassi.jpeg" class="card-img-top"><div class="card-body"><h5>Mango Lassi – ₹80</h5><p>Sweet mango yogurt drink.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\cooler.jpeg" class="card-img-top"><div class="card-body"><h5>Watermelon Cooler – ₹100</h5><p>Chilled watermelon juice with mint.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\cranberry.jpeg" class="card-img-top"><div class="card-body"><h5>Cranberry Cooler – ₹110</h5><p>Fruity, tangy cranberry mocktail.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\strawberry.jpeg" class="card-img-top"><div class="card-body"><h5>Strawberry Shake – ₹90</h5><p>Rich strawberry flavored milkshake.</p></div></div></div>
+</div>
+<h3 class="mt-5" style="cursor: pointer;"onclick="toggleFastFood()">Fast Food &#x25BC;</h3>
+<div id="FastFood-section" class="row-cols-1 row-cols-md-2 g-4" style="display: none;">
+  <script>
+  function toggleFastFood() {
+    const section = document.getElementById('FastFoodt-section');
+    if (section.style.display === 'none') {
+      section.style.display = 'flex';
+    } else {
+      section.style.display = 'none';
+    }
+  }
+</script>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\burger.jpeg" class="card-img-top"><div class="card-body"><h5>Veg Burger – ₹90</h5><p>Crunchy patty with veggies & sauces in a bun.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\sandwich.jpeg" class="card-img-top"><div class="card-body"><h5>Cheese Sandwich – ₹80</h5><p>Grilled sandwich with melted cheese.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\vegpizza.jpeg" class="card-img-top"><div class="card-body"><h5>Veg Pizza (Regular) – ₹150</h5><p>Loaded with cheese & fresh veggies.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\fries.jpeg" class="card-img-top"><div class="card-body"><h5>French Fries – ₹70</h5><p>Crispy potato fries served with dip.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\wrap.jpeg" class="card-img-top"><div class="card-body"><h5>Paneer Wrap – ₹100</h5><p>Spicy paneer tikka wrapped in roti.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\maggi.jpeg" class="card-img-top"><div class="card-body"><h5>Cheese Maggi – ₹70</h5><p>Masala Maggi with extra cheese.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\puff.jpeg" class="card-img-top"><div class="card-body"><h5>Veg Puff – ₹50</h5><p>Flaky pastry stuffed with spiced vegetables.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\bread.jpeg" class="card-img-top"><div class="card-body"><h5>Garlic Bread – ₹90</h5><p>Toasted bread with garlic & cheese.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\toast.jpeg" class="card-img-top"><div class="card-body"><h5>Chilli Cheese Toast – ₹100</h5><p>Spicy and cheesy toast perfection.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\nachos.jpeg" class="card-img-top"><div class="card-body"><h5>Loaded Nachos – ₹120</h5><p>Nachos topped with salsa, cheese & jalapenos.</p></div></div></div>
+</div>
+<h3 class="mt-5" style="cursor: pointer;"onclick="togglePureVegetarianSprcials()">Pure Vegetarian Specials &#x25BC;</h3>
+<div id="PureVegetarianSprcials-section" class="row row-cols-1 row-cols-md-2 g-4" style="display: none;">
+  <script>
+  function togglePureVegetarianSprcials() {
+    const section = document.getElementById('PureVegetarianSprcials-section');
+    if (section.style.display === 'none') {
+      section.style.display = 'flex';
+    } else {
+      section.style.display = 'none';
+    }
+  }
+</script>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\chole.jpeg" class="card-img-top"><div class="card-body"><h5>Chole Bhature – ₹120</h5><p>Spicy chole served with fried bhature.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\paratha.jpeg" class="card-img-top"><div class="card-body"><h5>Aloo Paratha – ₹90</h5><p>Stuffed paratha with butter & curd.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\sabzi.jpeg" class="card-img-top"><div class="card-body"><h5>Poori Sabzi – ₹100</h5><p>Fluffy pooris with potato curry.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\vegthali.jpeg" class="card-img-top"><div class="card-body"><h5>Veg Thali – ₹200</h5><p>Full meal with roti, rice, sabzi & dessert.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\palak.jpeg" class="card-img-top"><div class="card-body"><h5>Palak Paneer – ₹190</h5><p>Spinach curry with paneer cubes.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\bharta.jpeg" class="card-img-top"><div class="card-body"><h5>Baingan Bharta – ₹160</h5><p>Roasted brinjal mashed with spices.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\stuffed.jpeg" class="card-img-top"><div class="card-body"><h5>Stuffed Capsicum – ₹170</h5><p>Bell peppers filled with spiced mix veg.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\malaimatar.jpeg" class="card-img-top"><div class="card-body"><h5>Methi Malai Matar – ₹180</h5><p>Fenugreek and peas in creamy gravy.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\jeeraloo.jpeg" class="card-img-top"><div class="card-body"><h5>Jeera Aloo – ₹130</h5><p>Simple yet flavorful cumin potatoes.</p></div></div></div>
+  <div class="col"><div class="card"><img src="C:\Users\hp\Desktop\Website\img\bhurji.jpeg" class="card-img-top"><div class="card-body"><h5>Paneer Bhurji – ₹150</h5><p>Scrambled paneer with onion & spices.</p></div></div></div>
+</div>
+
+
+<!-- Order Online -->
+  <section id="order" class="py-5 text-center">
+    <div class="container">
+      <img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt="Order Icon" style="width: 50px; margin-bottom: 10px;">
+      <h2 class="mb-4">Order Online</h2>
+      <form class="text-start mx-auto" style="max-width: 600px;">
+        <div class="mb-3">
+          <label class="form-label">Your Name</label>
+          <input type="text" class="form-control" placeholder="Enter your name" required />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Your Address</label>
+          <input type="text" class="form-control" placeholder="Delivery address" required />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Your Order</label>
+          <textarea class="form-control" rows="4" placeholder="E.g., 2x Paneer, 1x Biryani" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success px-5">Place Order</button>
+      </form>
+    </div>
+  </section>
+  <!-- Contact Us -->
+  <section id="contact" class="bg-light py-5">
+    <div class="container">
+      <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Contact Icon" style="width: 50px; margin-bottom: 10px;">
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <form class="text-start mx-auto" style="max-width: 600px;">
+        <div class="mb-3">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-control" placeholder="you@example.com" required />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Message</label>
+          <textarea class="form-control" rows="4" placeholder="Your message here..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success px-5">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center" style="background-color: #006400; color: white; padding: 1rem 0;">
+    <p class="mb-0">&copy; 2025 Rasrang | Pure Vegetarian Restaurant</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
